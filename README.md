@@ -67,6 +67,12 @@ brew install bun
 powershell -c "irm bun.sh/install.ps1 | iex"
 ```
 
+或者通过 npm 安装（Node.js 环境）：
+
+```bash
+npm install -g bun
+```
+
 安装完成后，重新打开终端并确认：
 
 ```bash

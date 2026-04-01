@@ -67,6 +67,12 @@ brew install bun
 powershell -c "irm bun.sh/install.ps1 | iex"
 ```
 
+Or install via npm (Node.js environment):
+
+```bash
+npm install -g bun
+```
+
 After installation, reopen the terminal and verify:
 
 ```bash
