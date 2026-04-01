@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "bin": {
-    "claude-haha": "./bin/claude-haha"
+    "claude": "./bin/claude"
   },
   "scripts": {
     "claude-haha": "bun run ./bin/claude-haha",

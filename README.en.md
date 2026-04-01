@@ -123,16 +123,16 @@ CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
 
 ```bash
 # Interactive TUI mode (full interface)
-./bin/claude-haha
+./bin/claude
 
 # Headless mode (single prompt)
-./bin/claude-haha -p "your prompt here"
+./bin/claude -p "your prompt here"
 
 # Pipe input
-echo "explain this code" | ./bin/claude-haha -p
+echo "explain this code" | ./bin/claude -p
 
 # Show all options
-./bin/claude-haha --help
+./bin/claude --help
 ```
 
 #### Windows
@@ -158,7 +158,7 @@ bun --env-file=.env ./src/localRecoveryCli.ts
 
 ```bash
 # Same usage as macOS / Linux
-./bin/claude-haha
+./bin/claude
 ```
 
 > **Note**: Some features (voice input, Computer Use, sandbox isolation, etc.) are not available on Windows. This does not affect the core TUI interaction.
@@ -187,7 +187,7 @@ bun --env-file=.env ./src/localRecoveryCli.ts
 If the full TUI has issues, use the simplified readline-based interaction mode:
 
 ```bash
-CLAUDE_CODE_FORCE_RECOVERY_CLI=1 ./bin/claude-haha
+CLAUDE_CODE_FORCE_RECOVERY_CLI=1 ./bin/claude
 ```
 
 ---
@@ -210,7 +210,7 @@ The leaked source could not run directly. This repository mainly fixes the follo
 ## Project Structure
 
 ```text
-bin/claude-haha          # Entry script
+bin/claude              # Entry script
 preload.ts               # Bun preload (sets MACRO globals)
 .env.example             # Environment variable template
 src/
