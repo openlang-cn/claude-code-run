@@ -1,11 +1,8 @@
 @echo off
 REM Windows batch wrapper for Claude Code
 
-REM Get the directory of this batch file
-SET "ROOT_DIR=%~dp0.."
-
-REM Change to project root
-cd /d "%ROOT_DIR%"
+REM Get the directory of this batch file and calculate project root
+SET "PROJECT_ROOT=%~dp0.."
 
 REM Check if bun is available
 where bun >nul 2>&1
@@ -16,5 +13,5 @@ if errorlevel 1 (
     exit /b 1
 )
 
-REM Run the CLI with the environment file
-bun --env-file=.env ./src/entrypoints/cli.tsx %*
+REM Run the CLI with the environment file and preload
+bun --preload "%PROJECT_ROOT%/preload.ts" --env-file="%PROJECT_ROOT%/.env" "%PROJECT_ROOT%/src/entrypoints/cli.tsx" %*
